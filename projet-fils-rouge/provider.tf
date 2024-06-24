@@ -6,7 +6,15 @@ terraform {
     }
   }
 }
+terraform {
+  cloud {
+    organization = "terraformcloud98-org"
 
+    workspaces {
+      name = "projet-fils-rouge"
+    }
+  }
+}
 provider "aws" {
   region     = "us-east-1"
 }
